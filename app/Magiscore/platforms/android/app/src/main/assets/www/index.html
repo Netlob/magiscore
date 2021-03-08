@@ -335,7 +335,7 @@
                 <div id="mobilePersonInfo" class="dropdown-header d-block d-md-none">Voornaam Achternaam</div>
                 <a class="dropdown-item vibrate" onclick="syncGrades()">
                   <i class="fas fa-sync fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Sync cijfers
+                  Cijfers bijwerken
                 </a>
                 <!-- <a class="dropdown-item vibrate" data-toggle="modal" data-target="#passedModal">
                   <i class="fas fa-check fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -354,15 +354,15 @@
                   onclick="$('#terminal-wrapper').toggle()">
                   <!-- style="display: none;" -->
                   <i class="fas fa-terminal fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Toggle terminal
+                  Terminal schakelen
                 </a>
                 <a class="dropdown-item vibrate" onclick="purchaseNonConsumable1()" id="verwijder-ads">
                   <i class="fas fa-ban fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Verwijder advertenties
+                  Advertenties verwijderen
                 </a>
                 <a class="dropdown-item vibrate" onclick="restorePurchases1()" id="herstel-aankopen">
                   <i class="fas fa-download fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Herstel aankopen
+                  Aankopen herstellen
                 </a>
                 <a class="dropdown-item vibrate" onclick="viewController.openSettings()">
                   <i class="fas fa-cog fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -387,7 +387,7 @@
           <div id="nonconsumable1-purchase"></div>
           <h3 class="ml-1 pl-3 font-weight-bold text-primary">Download Spotistats</h3>
           <p class="ml-1 pl-3 text-primary">Wil jij elk moment van het jaar weten welke artiesten en liedjes je het
-            meeste luistert, zien hoeveel uur Spotify je luisterd, op welke tijdstippen je luisterd en nog veel meer
+            meeste luistert, zien hoeveel uur Spotify je luistert, op welke tijdstippen je luistert en nog veel meer
             uitgebreide info? Download dan nu Spotistats voor iOS en Android!</p>
           <div class="ml-1 pl-3 mb-4" style="margin-bottom: -20px;">
             <a class="playStoreLink"
@@ -415,7 +415,7 @@
               <hr class="mt-2 mb-1">
               <span class="text-gray-500" style="font-size: 11px"><i class="far fa-info-circle fa-s"></i>
                 Is je schoolfoto niet zo goed gelukt? Dan kun je een coole smiley als profielfoto gebruiken! Druk op <i
-                  class="far fa-sync-alt fa-s"></i> om je schoolfoto te refreshen
+                  class="far fa-sync-alt fa-s"></i> om je schoolfoto bij te werken.
               </span>
             </li>
             <li class="list-group-item shadow mb-2 d-inline-block">Developer
@@ -430,10 +430,10 @@
           <br>
           <h6 class="ml-3 pl-1 font-weight-bold text-primary">Cijfers</h6>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item shadow mb-2">Reset <span id="excluded-count"></span> uitgeschakelde cijfers<a
-                class="float-right menu-a vibrate" onclick="viewController.clearExclude()">RESET</a>
+            <li class="list-group-item shadow mb-2"><span id="excluded-count"></span> genegeerde cijfers resetten<a
+                class="float-right menu-a vibrate" onclick="viewController.clearExclude()">RESETTEN</a>
             </li>
-            <li class="list-group-item shadow mb-2 d-inline-block">Refresh oude cijfers
+            <li class="list-group-item shadow mb-2 d-inline-block">Oude cijfers resetten
               <div class="md-checkbox vibrate d-inline-block float-right" style="font-size:1rem">
                 <input id="refreshAll-checkbox" type="checkbox" onchange="viewController.refreshOldGrades(this)">
                 <label for="refreshAll-checkbox"></label>
@@ -447,20 +447,20 @@
                   id="passed-input"></div>
               <hr class="mt-2 mb-1">
               <span class="text-gray-500" style="font-size: 11px"><i class="far fa-info-circle fa-s"></i>
-                Wil je een kommagetal? Gebruik dan een punt(.) als komma(,) - Bijvoorbeeld 5.5 ipv 5,5
+                Om een kommagetal in te voeren, moet je een punt (.) gebruiken in plaats van een komma. 5,5 wordt dus 5.5.
               </span>
             </li>
           </ul>
           <br>
-          <h6 class="ml-3 pl-1 font-weight-bold text-primary">Feedback</h6>
+          <h6 class="ml-3 pl-1 font-weight-bold text-primary">Contact</h6>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item shadow mb-2">App/Play Store<a class="float-right menu-a vibrate"
-                onclick="viewController.giveFeedback()">REVIEW</a>
+            <li class="list-group-item shadow mb-2">Play Store<a class="float-right menu-a vibrate"
+                onclick="viewController.giveFeedback()">BEOORDELEN</a>
             </li>
             <li class="list-group-item shadow mb-2">Tikkie<a class="float-right menu-a vibrate"
                 onclick="cordova.InAppBrowser.open('https://bunq.me/magbot', '_system');">TIKKIE</a>
             </li>
-            <li class="list-group-item shadow mb-2">E-Mail<a class="float-right menu-a vibrate"
+            <li class="list-group-item shadow mb-2">E-mail<a class="float-right menu-a vibrate"
                 href="mailto:info@magiscore.nl?subject=Feedback Magiscore" target="_system">E-MAIL</a>
             </li>
             <li class="list-group-item shadow mb-2">Discord<a class="float-right menu-a vibrate"
@@ -483,7 +483,7 @@
             BV.<br>Alle
             gegevens worden alleen lokaal opgeslagen en zullen nooit gedeeld worden.<br>Doordat Magiscore niet gelinkt
             is
-            aan Schoolmaster BV kans het soms zijn dat de app niet goed werkt. In dat geval kan je voor support een mail
+            aan Schoolmaster BV kan het soms zijn dat de app niet goed werkt. In dat geval kan je voor support een mail
             sturen naar info@magiscore.nl. Ga voor de gehele privacyverklaring naar <a class="menu-a vibrate"
               onclick="cordova.InAppBrowser.open('https://magiscore.nl/privacy', '_system');">https://magiscore.nl/privacy</a>,
             en
@@ -681,7 +681,7 @@
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Afgerond behaalde cijfers</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Behaalde afgeronde cijfers</h6>
                   <!--<div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-label="Download grafiek" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -930,7 +930,7 @@
         <!-- <hr class="mt-1 mb-1 p-0"> -->
         <div class="md-checkbox vibrate m-4" style="font-size:1rem">
           <input id="grade-modal-count" type="checkbox">
-          <label for="grade-modal-count">Tel cijfer mee in berekeningen</label>
+          <label for="grade-modal-count">Cijfer meerekenen in gemiddeldes</label>
         </div>
       </div>
     </div>

@@ -155,7 +155,7 @@ function round(num) {
 
 async function syncGrades() {
   return new Promise(async (resolve, reject) => {
-    $("div:contains('Nieuwe cijfer(s) beschikbaar')").remove();
+    $("div:contains('Ververs om nieuwe cijfers te zoeken')").remove();
     if (m == null || m == undefined) {
       if (navigator.connection.type !== Connection.NONE) {
         refreshToken()
@@ -262,7 +262,7 @@ async function syncGrades() {
         });
         logConsole("[INFO]   Grades to fill: " + newGrades.length);
         if (newGrades.length == 0) {
-          viewController.toast("Geen nieuwe cijfers gevonden...", 3000, false);
+          viewController.toast("Je cijfers zijn al up-to-date!", 3000, false);
           viewController.overlay("hide");
           resolve(await checkNewCourses(newGrades));
         } else {
@@ -271,9 +271,9 @@ async function syncGrades() {
           var snack = viewController.toast(
             `<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
         style="width: 20%; height: 20px;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" id="sync-progress"></div><br><span class="text-center"><span id="sync-synced">0/${newGrades.length
-            }</span> van je ${viewController.config.refreshOldGrades ? "" : " nieuwe"
-            } cijfers gesynced<br><!-- <i
-        class="far fa-info-circle fa-s display-inline-block mr-3 ml-2 mb-2 mt-3"> Refresh oude cijfers is ingeschakeld, alle cijfers worden gerefreshed --></span>`,
+            }</span> ${viewController.config.refreshOldGrades ? "" : " nieuwe"
+            } cijfers bijgewerkt<br><!-- <i
+        class="far fa-info-circle fa-s display-inline-block mr-3 ml-2 mb-2 mt-3"> Oude cijfers resetten is ingeschakeld, alle cijfers worden gerefreshed --></span>`,
             false,
             true
           );
@@ -322,7 +322,7 @@ async function syncGrades() {
                 });
                 viewController.toast(
                   `
-                <b class="mb-0">${newGrades.length} nieuwe cijfers gesycned!</b>
+                <b class="mb-0">${newGrades.length} cijfers gesynchroniseerd!</b>
                 ${extra}
               `,
                   7000,
@@ -549,19 +549,19 @@ function onDeviceReady() {
               // checkForUpdate().then(hasUpdate => {
               //   logConsole("hasUpdate: " + hasUpdate)
               //   if (hasUpdate) {
-              //     viewController.toast('<span class="float-left">Nieuwe cijfers beschikbaar </span><a class="float-right vibrate" onclick="syncGrades()">UPDATE</a>', 4000, true)
+              //     viewController.toast('<span class="float-left">Nieuwe cijfers beschikbaar </span><a class="float-right vibrate" onclick="syncGrades()">BIJWERKEN</a>', 4000, true)
               //   }
               // })
               //   .then(grades => {
               //     logConsole("Grades: " + JSON.stringify(grades))
               //     logConsole("Latest: " + JSON.stringify(latest))
               //     logConsole("Got latest grades!")
-              //     // viewController.toast('Nieuwe cijfers beschikbaar <span class="text-warning float-right ml-3">UPDATE</span>', 3000)
+              //     // viewController.toast('Nieuwe cijfers beschikbaar <span class="text-warning float-right ml-3">BIJWERKEN</span>', 3000)
               //     localStorage.setItem("latest", JSON.stringify(grades))
               //     logConsole(JSON.stringify(latest))
               //     for (let grade in grades) {
               //       if (!(latest.some(x => x.kolomId === grade.kolomId && x.omschrijving === grade.omschrijving && x.waarde === grade.waarde && x.ingevoerdOp === grade.ingevoerdOp))) {
-              //         viewController.toast('<span class="float-left">Nieuwe cijfers beschikbaar </span><a class="float-right vibrate" onclick="syncGrades()">UPDATE</a>', 4000, true)
+              //         viewController.toast('<span class="float-left">Nieuwe cijfers beschikbaar </span><a class="float-right vibrate" onclick="syncGrades()">BIJWERKEN</a>', 4000, true)
               //         break;
               //       }
               //     }

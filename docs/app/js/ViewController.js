@@ -721,7 +721,7 @@ function generateHTML(lesson) {
                                 <div class="form-group">
                                     <input type="number" class="form-control form-control-user" id="newGrade-weight" min="0" placeholder="Weging">
                                 </div>
-                            <a onclick="lessonController.getLesson('${lesson}').lesson.getNewAverage()" class="btn btn-primary btn-user btn-block bg-gradiant-primary">Bereken</a>
+                            <a onclick="lessonController.getLesson('${lesson}').lesson.getNewAverage()" class="btn btn-primary btn-user btn-block bg-gradiant-primary">Berekenen</a>
                             </form>
                             <div class="showCalculatedGrade">
                                 <h1 id="newGrade-newGrade"><i class="fas fa-chart-line fa-sm text-primary"></i></h1>
@@ -738,12 +738,12 @@ function generateHTML(lesson) {
                             <form class="getGrade">
                                 <p></p>
                                 <div class="form-group">
-                                    <input type="number" class="form-control form-control-user" id="getGrade-grade" min="1" max="10" placeholder="Ik wil staan">
+                                    <input type="number" class="form-control form-control-user" id="getGrade-grade" min="1" max="10" placeholder="Wat ik wil staan">
                                 </div>
                                 <div class="form-group">
                                     <input type="number" class="form-control form-control-user" id="getGrade-weight" min="0" placeholder="Weging">
                                 </div>
-                                <a onclick="lessonController.getLesson('${lesson}').lesson.needToGet()" class="btn btn-primary btn-user btn-block bg-gradiant-primary">Bereken</a>
+                                <a onclick="lessonController.getLesson('${lesson}').lesson.needToGet()" class="btn btn-primary btn-user btn-block bg-gradiant-primary">Berekenen</a>
                             </form>
                             <div class="showCalculatedGrade">
                               <h1 id="getGrade-newGrade"><i class="fas fa-chart-line fa-sm text-primary"></i></h1>

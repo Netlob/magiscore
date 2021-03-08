@@ -111,7 +111,7 @@
             iconRefreshing: "&hellip;",
             instructionsPullToRefresh: "Veeg om cijfers te synchroniseren",
             instructionsReleaseToRefresh: "Laat los om cijfers te synchroniseren",
-            instructionsRefreshing: "Cijfers aan het synchroniseren",
+            instructionsRefreshing: "Cijfers synchroniseren...",
             refreshTimeout: 500,
             getMarkup: function () {
                 return '\n<div class="__PREFIX__box">\n  <div class="__PREFIX__content">\n    <div class="__PREFIX__icon"></div>\n    <div class="__PREFIX__text"></div>\n  </div>\n</div>\n'

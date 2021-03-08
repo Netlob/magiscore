@@ -68,7 +68,7 @@ function onDeviceReady() {
   navigator.notification.confirm(
     "Magiscore is een privé-iniatief en maakt geen deel uit van Schoolmaster BV. \nAl" +
     "le gegevens worden alleen lokaal opgeslagen en zullen nooit gedeeld worden.\nDoo" +
-    "rdat Magiscore niet gelinkt is aan Schoolmaster BV kans het soms zijn dat de app" +
+    "rdat Magiscore niet gelinkt is aan Schoolmaster BV kan het soms zijn dat de app" +
     " niet goed werkt. In dat geval kan je voor support een mail sturen naar info@mag" +
     "iscore.nl. Ga voor de gehele privacyverklaring naar https://magiscore.nl/privacy" +
     ", en voor de gebruiksvoorwaarden (EULA) naar https://magiscore.nl/terms. Door in" +

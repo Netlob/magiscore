@@ -96,7 +96,7 @@ class CourseController {
           ) {
             popup = true;
             viewController.toast(
-              '<span class="float-left">Nieuwe cijfer(s) beschikbaar </span><a class="float-right vibrate text-warning" onclick="syncGrades()">UPDATE</a>',
+              '<span class="float-left">Ververs om nieuwe cijfers te zoeken </span><a class="float-right vibrate text-warning" onclick="syncGrades()">BIJWERKEN</a>',
               false,
               true
             );

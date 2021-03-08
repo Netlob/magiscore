@@ -435,7 +435,7 @@ class ViewController {
       this.updateConfig({
         refreshOldGrades: false
       });
-      this.toast("Refresh oude cijfers uitgezet", 2000, false);
+      this.toast("Oude cijfers resetten uitgezet", 2000, false);
     }
   }
 
@@ -555,7 +555,7 @@ class ViewController {
       minutes = minutes - (days * 24 * 60) - (hours * 60);
       seconds = 60 - (seconds - (days * 24 * 60 * 60) - (hours * 60 * 60) - (minutes * 60));
 
-      $("#kutiddink").text(`${Math.abs(days)} dagen, ${hours} uren, ${minutes} en ${seconds} seconden`);
+      $("#kutiddink").text(`${Math.abs(days)} dagen, ${hours} uur, ${minutes} minuten en ${seconds} seconden`);
     }, 1000);
   }
 
@@ -593,7 +593,7 @@ function confirmRefreshOldGrades(button) {
     viewController.updateConfig({
       refreshOldGrades: true
     });
-    viewController.toast("Refresh oude cijfers aangezet", 2000, false);
+    viewController.toast("Oude cijfers resetten aangezet", 2000, false);
   } else if (button == 2) {
     $("#refreshAll-checkbox").prop("checked", false);
     viewController.updateConfig({
@@ -1312,7 +1312,7 @@ function setChartData(config, lesson, everything) {
       labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
       datasets: [
         {
-          label: "Afgerond behaalde cijfers",
+          label: "Behaalde afgeronde cijfers",
           data: afgerond,
           fill: false,
           backgroundColor: [
@@ -1651,7 +1651,7 @@ function generateHTML(lesson) {
                                     <input type="number" class="form-control form-control-user" id="newGrade-weight" min="0" placeholder="Weging">
                                 </div>
                             <a onclick="lessonController.getLesson('${lesson.name
-    }').lesson.getNewAverage()" class="btn btn-primary btn-user btn-block bg-gradiant-primary">Bereken</a>
+    }').lesson.getNewAverage()" class="btn btn-primary btn-user btn-block bg-gradiant-primary">Berekenen</a>
                             </form>
                             <div class="showCalculatedGrade">
                                 <h1 id="newGrade-newGrade"><i class="fas fa-chart-line fa-sm text-primary"></i></h1>
@@ -1668,13 +1668,13 @@ function generateHTML(lesson) {
                             <form class="getGrade">
                                 <p></p>
                                 <div class="form-group">
-                                    <input type="number" class="form-control form-control-user" id="getGrade-grade" min="1" max="10" placeholder="Ik wil staan">
+                                    <input type="number" class="form-control form-control-user" id="getGrade-grade" min="1" max="10" placeholder="Wat ik wil staan">
                                 </div>
                                 <div class="form-group">
                                     <input type="number" class="form-control form-control-user" id="getGrade-weight" min="0" placeholder="Weging">
                                 </div>
                                 <a onclick="lessonController.getLesson('${lesson.name
-    }').lesson.needToGet()" class="btn btn-primary btn-user btn-block bg-gradiant-primary">Bereken</a>
+    }').lesson.needToGet()" class="btn btn-primary btn-user btn-block bg-gradiant-primary">Berekenen</a>
                             </form>
                             <div class="showCalculatedGrade">
                               <h1 id="getGrade-newGrade"><i class="fas fa-chart-line fa-sm text-primary"></i></h1>
@@ -1745,7 +1745,7 @@ function generateHTML(lesson) {
                   <div class="card shadow mb-4">
                   <!-- Card Header - Dropdown -->
                   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                      <h6 class="m-0 font-weight-bold text-primary">Afgerond behaalde cijfers</h6>
+                      <h6 class="m-0 font-weight-bold text-primary">Behaalde afgeronde cijfers</h6>
                       <!--<div class="dropdown no-arrow">
                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-label="Download grafiek" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
