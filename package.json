@@ -10,7 +10,7 @@
     "@magisterjs/dynamic-authcode": "^1.1.0",
     "fetch": "^1.1.0",
     "magister.js": "^2.0.0-alpha.11",
-    "openid-client": "^3.6.1",
+    "openid-client": "^5.3.1",
     "phin": "^3.4.0",
     "tough-cookie": "^3.0.1"
   },
